@@ -1,5 +1,3 @@
-package Session20;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.PrintWriter;
@@ -11,8 +9,8 @@ public class Lab {
     public static void main(String[] args) {
         //empty
     }
-    
-    /* Write a function which takes an array of File objects 
+
+    /* Write a function which takes an array of File objects
     and returns their total size in kilobytes. */
     static double totalSize(File[] files) {
         // your code
@@ -22,9 +20,9 @@ public class Lab {
         return sum;
     }
 
-    /* Write a function which takes two File objects, and 
-    appends the content of the second file at the end of 
-    the first file (parameter order). Then the second file 
+    /* Write a function which takes two File objects, and
+    appends the content of the second file at the end of
+    the first file (parameter order). Then the second file
     should be deleted. */
     static void merge(File f1, File f2) throws Exception {
         Scanner sc = new Scanner(f2);
@@ -39,10 +37,10 @@ public class Lab {
         sc.close();
     }
 
-    /* Consider a structured text file where each row 
-    consists of two fields: Name and Age, separated by a 
-    tab (\t) character. Write a function which searches for 
-    a specific name and returns the corresponding age. If 
+    /* Consider a structured text file where each row
+    consists of two fields: Name and Age, separated by a
+    tab (\t) character. Write a function which searches for
+    a specific name and returns the corresponding age. If
     no such name appears in the file it should return -1. */
     static int getAge(File f, String name) throws Exception {
         //your code
@@ -58,10 +56,10 @@ public class Lab {
         return -1;
     }
 
-    /* Write a file-displayer program which asks user to 
-    enter a file name and displays the contents of the file 
-    to the screen line-by-line if such a file exists. Else, 
-    your program should inform the user that the file 
+    /* Write a file-displayer program which asks user to
+    enter a file name and displays the contents of the file
+    to the screen line-by-line if such a file exists. Else,
+    your program should inform the user that the file
     does not exist and asks another file name. */
     public static void jCat() throws Exception{
         Scanner sc = new Scanner(System.in);

@@ -1,5 +1,3 @@
-package Session18;
-
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
@@ -11,10 +9,10 @@ public class Lab {
         System.out.println(isBalanced("()()(()"));
         System.out.println(isBalanced("()())()"));
         System.out.println(isBalanced("(()())()"));
-        System.out.println(isBalanced("((()))"));       
+        System.out.println(isBalanced("((()))"));
     }
 
-    /* Write a function which takes a string and checks if all 
+    /* Write a function which takes a string and checks if all
     of the parentheses (if any) in it are balanced.
     Hint: Use stack
     e.g.
@@ -24,7 +22,7 @@ public class Lab {
     isBalanced(“no parenthesis”) = true
     isBalanced(“we(i)rd”) = true */
     static boolean isBalanced(String s) {
-        // the kind of elements that you 
+        // the kind of elements that you
         // push to the stack has no importance
         // in this question
         Stack<Object> st = new Stack<>();
@@ -40,11 +38,11 @@ public class Lab {
         return st.empty();
     }
 
-    /* Write a function which takes two stacks as 
-    parameters and swaps their contents without 
-    changing the order of the elements. You are only 
-    allowed to use primitive data types and one extra 
-    stack (don’t use more stacks). Allowed operations on 
+    /* Write a function which takes two stacks as
+    parameters and swaps their contents without
+    changing the order of the elements. You are only
+    allowed to use primitive data types and one extra
+    stack (don’t use more stacks). Allowed operations on
     a stack are standard ops like push, pop, peek, size. */
     static void transfer(Stack<Integer> s1, Stack<Integer> s2) {
         while(!s1.empty())
@@ -60,16 +58,16 @@ public class Lab {
         transfer(temp, s1);
     }
 
-    /* In your high-school, one of your friends has a rich dad and 
-    upon your friend’s academic success, his dad decided to gift 
-    all the school with unlimited amount of baklava. Baklavas are 
-    distributed from school cafeteria one-by-one and initially 500 
-    students are in the queue. Each time with 60% probability, the 
-    student in the front of the queue decides to eat one more 
-    piece and enters the queue back again from the back. 
-    Baklavas are served until there’s no one left in the queue. A 
+    /* In your high-school, one of your friends has a rich dad and
+    upon your friend’s academic success, his dad decided to gift
+    all the school with unlimited amount of baklava. Baklavas are
+    distributed from school cafeteria one-by-one and initially 500
+    students are in the queue. Each time with 60% probability, the
+    student in the front of the queue decides to eat one more
+    piece and enters the queue back again from the back.
+    Baklavas are served until there’s no one left in the queue. A
     piece of baklava costs 7 liras.
-    Simulate this process and find out the average spending of 
+    Simulate this process and find out the average spending of
     rich guy for this festival. */
     static int baklavaMadness(int numStudents, int baklavaCost, double p) {
         Queue<Object> q = new LinkedList<>();
@@ -86,10 +84,10 @@ public class Lab {
         return baklavasEaten * baklavaCost;
     }
 
-    /* Write a function which takes a string representing an 
-    arithmetical expression written in postfix notation 
-    and calculates the result. All numbers are integers 
-    and only + and * operations are supported. You can 
+    /* Write a function which takes a string representing an
+    arithmetical expression written in postfix notation
+    and calculates the result. All numbers are integers
+    and only + and * operations are supported. You can
     assume that the sentence has correct syntax.
     Hint: Use stack
     e.g.
@@ -112,5 +110,5 @@ public class Lab {
         return st.pop();
     }
 
-    
+
 }

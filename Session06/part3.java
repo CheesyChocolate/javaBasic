@@ -1,5 +1,3 @@
-package Session6;
-
 public class part3 {
     public static void main(String[] args) {
 //        int H_count = 0;

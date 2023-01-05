@@ -1,5 +1,3 @@
-package Session14;
-
 import java.util.Scanner;
 
 public class Lab {
@@ -9,10 +7,10 @@ public class Lab {
         System.out.println(getInput());
     }
 
-    /* Write a function which takes integers from 
-    user, store them in an array and returns the 
-    array. The first number user gives is the 
-    number of integers she is planning to give 
+    /* Write a function which takes integers from
+    user, store them in an array and returns the
+    array. The first number user gives is the
+    number of integers she is planning to give
     further. */
     static int[] getInput() {
         Scanner sc = new Scanner(System.in);
@@ -27,15 +25,15 @@ public class Lab {
         return data;
     }
 
-    /* Write a program which takes integers from 
-    user, and prints them in reverse order. The first 
-    integer that user gives will be the number of 
+    /* Write a program which takes integers from
+    user, and prints them in reverse order. The first
+    integer that user gives will be the number of
     integers she will give further.
     e.g.
-    Input: 
-    5 
+    Input:
+    5
     2 6 2 3 1
-    Output: 
+    Output:
     1 3 2 6 2 */
     public static void reverser()   {
         Scanner sc = new Scanner(System.in);
@@ -48,8 +46,8 @@ public class Lab {
         sc.close();
     }
 
-    /* Given an integer array and an integer k find 
-    out how many pairs are there in the array 
+    /* Given an integer array and an integer k find
+    out how many pairs are there in the array
     whose sum is equal to k.
     e.g.
     countPairs([3, 2, 5, 6], 3) = 0
@@ -63,11 +61,11 @@ public class Lab {
         return count;
     }
 
-    /* Write a program which takes sorted integers 
-    from user until the user enters an unsorted 
-    number. Your program should detect the 
-    direction (ascending or descending) of sorting 
-    and then looks for an input in the wrong 
+    /* Write a program which takes sorted integers
+    from user until the user enters an unsorted
+    number. Your program should detect the
+    direction (ascending or descending) of sorting
+    and then looks for an input in the wrong
     direction. (You can do without arrays.)
     example runs:
     1, 2, 5, 8, 8, 9, 3
@@ -91,8 +89,8 @@ public class Lab {
         sc.close();
     }
 
-    /* • Write a function which takes two sorted 
-    integer arrays and returns a merged sorted 
+    /* • Write a function which takes two sorted
+    integer arrays and returns a merged sorted
     array. (all ascending order)
     e.g.
     sortArrays([4], [1,2,5]) = [1,2,4,5]

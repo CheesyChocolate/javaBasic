@@ -1,5 +1,3 @@
-package Session13;
-
 public class Lab {
 
     /* main method */
@@ -7,8 +5,8 @@ public class Lab {
        System.out.println(pow(2, 4));
     }
 
-   /* recursive function which takes two 
-    non-negative integer arguments n,m and 
+   /* recursive function which takes two
+    non-negative integer arguments n,m and
     computes the power n^m.
     “for” or “while” loops are forbidden.
     e.g.
@@ -23,8 +21,8 @@ public class Lab {
           return pow(a, b-1) * a;
     }
 
-    /* Write a function which takes two positive 
-    integer arguments n,m and returns n % m. 
+    /* Write a function which takes two positive
+    integer arguments n,m and returns n % m.
     Don’t use % operator.
     e.g.
     mod(3, 2) = 1
@@ -35,8 +33,8 @@ public class Lab {
         return a - (a/b)*b;
     }
 
-    /* Write a recursive function which takes two 
-    positive integer arguments n,m and returns n 
+    /* Write a recursive function which takes two
+    positive integer arguments n,m and returns n
     % m. Don’t use %, *, / operators.
     e.g.
     mod(3, 2) = 1
@@ -50,8 +48,8 @@ public class Lab {
         return simplemod(a-b, b);
     }
 
-    /* Write the classic max(int, int) function 
-    without using operators > or < (you can use 
+    /* Write the classic max(int, int) function
+    without using operators > or < (you can use
     ==) and without using Math library.
     e.g.
     max(6, 3) = 6
@@ -74,8 +72,8 @@ public class Lab {
             return a; // a == b case
     }
 
-    /* • Write a recursive function which takes a 
-    string parameter and checks if it is a 
+    /* • Write a recursive function which takes a
+    string parameter and checks if it is a
     palindrome.
     e.g.
     isPal(“winnie”) = false
@@ -88,8 +86,8 @@ public class Lab {
         return s.charAt(0) == s.charAt(s.length()-1) && isPal(s.substring(1, s.length()-1));
     }
 
-    /* • Write a recursive function which takes a 
-    string parameter and checks if all its 
+    /* • Write a recursive function which takes a
+    string parameter and checks if all its
     characters appear only once.
     e.g.
     isUnique(“pickle”) = true

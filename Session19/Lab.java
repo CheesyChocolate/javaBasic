@@ -1,5 +1,3 @@
-package Session19;
-
 class Point {
     double x;
     double y;
@@ -51,7 +49,7 @@ public class Lab {
         //empty
     }
 
-    /* Write a function which takes two circles and returns 
+    /* Write a function which takes two circles and returns
     true iff they intersect with each other. */
     static double distance(Point p1, Point p2) {
         return Math.sqrt(Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2));
@@ -60,17 +58,17 @@ public class Lab {
         return distance(c1.origin, c2.origin) <= c1.radius + c2.radius;
     }
 
-    /* Write a function which reflects a point about another 
+    /* Write a function which reflects a point about another
     point (call it mirror), taking both as parameters. */
     static void reflect(Point p, Point mirror) {
         p.x += 2 * (mirror.x - p.x);
         p.y += 2 * (mirror.y - p.y);
     }
 
-    /* Write a function which takes a point represented in 
-    cartesian coordinates and returns an equivalent point 
-    represented in polar coordinates. You can assume 
-    that the input point always lies in first or fourth 
+    /* Write a function which takes a point represented in
+    cartesian coordinates and returns an equivalent point
+    represented in polar coordinates. You can assume
+    that the input point always lies in first or fourth
     quadrant of the cartesian plane. */
     static PointP toPolar(Point p) {
         double r = Math.sqrt(p.x*p.x + p.y*p.y);
@@ -78,9 +76,9 @@ public class Lab {
         return newPointP(r, theta);
     }
 
-    /* Write a function which takes two dates and returns 
-    their difference as another date object. For simplicity 
-    assume that a month is always 30 days and the first 
+    /* Write a function which takes two dates and returns
+    their difference as another date object. For simplicity
+    assume that a month is always 30 days and the first
     parameter of the function is always the earlier date. */
     static Date dateDiff(Date d1, Date d2) {
         // d1 is always back in time
@@ -95,9 +93,9 @@ public class Lab {
         return newDate(d2.day - d1.day, d2.month - d1.month, d2.year - d1.year);
     }
 
-    /* Write a function which recalculates people’s age 
-    based on today’s date and birthdays of people. You 
-    can use the function you wrote in the previous 
+    /* Write a function which recalculates people’s age
+    based on today’s date and birthdays of people. You
+    can use the function you wrote in the previous
     question. Round ages to the closest integral values. */
     static int roundDate(Date d) {
         // the middle is exactly in between

@@ -1,5 +1,3 @@
-package Session5;
-
 import java.util.Scanner;
 
 public class project1 {
@@ -13,7 +11,7 @@ public class project1 {
 	int number3 = number%10; // 3
 	int number4 = number/100; // 2
 	int temp = number%100; // 13
-	
+
 	if(number<20 && number > 9) {
 
 		if(number==10) System.out.println("ten");
@@ -30,9 +28,9 @@ public class project1 {
 		else if(number==18)
 			System.out.println("eighteen");
 		else if(number==19)
-			System.out.println("nineteen");	
-	}   
-	
+			System.out.println("nineteen");
+	}
+
 	else if(number<100) {
 		if(number2==0)
 			System.out.print("");
@@ -52,7 +50,7 @@ public class project1 {
 			System.out.print("eighty ");
 		else if (number2==9)
 			System.out.print("ninety ");
-		
+
 		if(number3==0)
 			System.out.print("");
 		else if(number3==1)
@@ -74,7 +72,7 @@ public class project1 {
 		else if(number3==9)
 			System.out.println("nine");
 		}
-	
+
 	if(number>99) {
 		if(number4==1)
 			System.out.print("one hundred ");
@@ -116,8 +114,8 @@ public class project1 {
 				System.out.println("eighteen");
 			else if(temp==19)
 				System.out.println("nineteen");
-			}   
-		
+			}
+
 		if(number<1000) {
 			int tmp2 = number2%10;
 			if(tmp2==0)
@@ -162,7 +160,7 @@ public class project1 {
 			}
 			}
 		}
-	
+
 		input.close();
 	}
 }

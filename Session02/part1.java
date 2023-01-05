@@ -1,5 +1,3 @@
-package Session2;
-
 import java.util.Scanner;
 
 public class part1 {
@@ -23,4 +21,3 @@ public class part1 {
         input.close();
     }
 }
-

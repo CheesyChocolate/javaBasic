@@ -1,5 +1,3 @@
-package Session22;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -40,16 +38,16 @@ public class Lab extends Application {
 		TodoApp app2 = new TodoApp();
         TextEditor app3 = new TextEditor();
 
-		app1.start(primaryStage);		
-		app2.start(primaryStage);		
-		app3.start(primaryStage);		
+		app1.start(primaryStage);
+		app2.start(primaryStage);
+		app3.start(primaryStage);
 	}
 }
 
-/** The following app annoys its user by tempting her to 
-click a button and moves the button as soon as she 
+/** The following app annoys its user by tempting her to
+click a button and moves the button as soon as she
 hovers the cursor over it.
-Modify it and make it even more annoying. Make 
+Modify it and make it even more annoying. Make
 sure that the button escapes to a random corner of  */
 class annoyingApp extends Application {
 
@@ -83,43 +81,43 @@ class annoyingApp extends Application {
     }
 }
 
-/** Load and run the todo app. Modify the code so that 
+/** Load and run the todo app. Modify the code so that
 registering a new item automatically clears the text box */
 
 class TodoApp extends Application {
-	
+
 	final double width = 400;
 	final double height = 300;
-	
+
 	int numItems = 0;
 	BorderPane root;
 	VBox content;
-	
-	
+
+
 	public void start(Stage stage) {
 		Button addButton = new Button("Add");
 		TextField field = new TextField();
-		
+
 		root = new BorderPane();
 		content = new VBox();
 		HBox bottom = new HBox(field, addButton);
 		bottom.setAlignment(Pos.CENTER);
-		
+
 		root.setBottom(bottom);
 		root.setCenter(content);
-		
+
 		addButton.setOnAction(e -> {
 			String text = field.getText();
 			if(text.length() > 0) {
 				addRow(text);
 			}
-				
+
 		});
-		
+
 		cosmetics();
 		finalize(stage);
 	}
-	
+
 	public void addRow(String text) {
 		Button delButton = new Button("done");
 		Label id = new Label(numItems+1+"");
@@ -127,16 +125,16 @@ class TodoApp extends Application {
 		HBox row = new HBox(30, id, item, delButton);
 		row.setAlignment(Pos.CENTER);
 		content.getChildren().add(row);
-		
+
 		delButton.setOnAction(e -> {
 			updateNums(row);
 			content.getChildren().remove(row);
 			numItems--;
 		});
-		
+
 		numItems++;
     }
-		
+
     public void addRow(String text, TextField field) {
         Button delButton = new Button("done");
         Label id = new Label(numItems+1+"");
@@ -152,7 +150,7 @@ class TodoApp extends Application {
             numItems--;
         });
     }
-	
+
 	public void updateNums(Node row) {
 		int rowIndex = content.getChildren().indexOf(row);
 		for(int i=rowIndex+1; i<content.getChildren().size(); i++) {
@@ -161,15 +159,15 @@ class TodoApp extends Application {
 			l.setText(i+""); // decrement by one
 		}
 	}
-	
+
 	public void cosmetics() {
 		content.setAlignment(Pos.CENTER);
 		BorderPane.setAlignment(content, Pos.CENTER);
 		BorderPane.setMargin(content, new Insets(20));
-		
+
 	}
-	
-	
+
+
 	public void finalize(Stage stage) {
 		Scene scene = new Scene(root, width, height);
 		stage.setScene(scene);
@@ -178,25 +176,25 @@ class TodoApp extends Application {
 	}
 }
 
-/**  Load and run the simple text editor app. Modify the 
+/**  Load and run the simple text editor app. Modify the
 code so that the user can pick custom fonts. */
 class TextEditor extends Application {
     final double width = 400;
 	final double height = 300;
-	
+
 	TextArea text;
 	BorderPane root;
 	boolean ctrlPressed;
-	
+
 	public void start(Stage stage) {
 		text = new TextArea();
 		root = new BorderPane(text);
 		ctrlPressed = false;
-		
+
 		text.setOnKeyPressed(e -> {
 			if( e.getCode() == KeyCode.CONTROL )
 				ctrlPressed = true;
-				
+
 			if( ctrlPressed)    {
 				if(e.getCode() == KeyCode.S)
 					try {
@@ -210,7 +208,7 @@ class TextEditor extends Application {
 					} catch (Exception e1) {
 						e1.printStackTrace();
 					}
-            }	
+            }
 		});
 
         ComboBox<String> box = new ComboBox<>();
@@ -223,15 +221,15 @@ class TextEditor extends Application {
             Font font = new Font(fontName, fontSize);
             text.setFont(font);
         });
-		
+
 		text.setOnKeyReleased(e -> {
 			if(e.getCode() == KeyCode.CONTROL)
 				ctrlPressed = false;
 		});
-		
-		finalize(stage);	
+
+		finalize(stage);
 	}
-	
+
 	public void load(Stage stage) throws FileNotFoundException  {
 		FileChooser fc = new FileChooser();
 		fc.setTitle("Open a file");
@@ -242,21 +240,21 @@ class TextEditor extends Application {
 		StringBuilder s = new StringBuilder();
 		while(sc.hasNextLine())
 			s.append(sc.nextLine());
-		
+
 		text.setText(s.toString());
         sc.close();
 	}
-	
+
 	public void save() throws IOException {
 		try (FileWriter out = new FileWriter("text.txt")) {
             out.write(text.getText());
         }
 	}
-	
+
 	public void finalize(Stage stage) {
 		Scene scene = new Scene(root, width, height);
 		stage.setScene(scene);
 		stage.setTitle("Text Editor");
 		stage.show();
 	}
-} 
+}

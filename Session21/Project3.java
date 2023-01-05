@@ -7,8 +7,6 @@ added and the other one is soted(buy avrage value) varsion of first one
 note: this version of program only supports Integer value not double,
 due to better readability in csv files*/
 
-package Session21;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

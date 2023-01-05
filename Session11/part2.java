@@ -1,5 +1,3 @@
-package Session11;
-
 public class part2 {
 //    Binary search
 //    public static int binarySearch(int[] arr, int key) {

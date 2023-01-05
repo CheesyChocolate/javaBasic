@@ -1,24 +1,22 @@
-package Session16;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
 public class Lab {
-    
+
     /* main method */
     public static void main(String[] args) {
         //empty
     }
 
-    /* Write a function which takes an ArrayList of 
-    characters and removes all ‘e’ characters in it 
-    without changing the order of other elements. 
+    /* Write a function which takes an ArrayList of
+    characters and removes all ‘e’ characters in it
+    without changing the order of other elements.
     (removeAll() method is not allowed) */
     public static void removeAllSimillar(){
         ArrayList<Character> arl = new ArrayList<>();
         for(int i=0; i<10; i++)
-            arl.add((char) 
+            arl.add((char)
         Math.round(Math.random()*3+100) );
         System.out.println(arl);
         cleanse(arl);
@@ -29,7 +27,7 @@ public class Lab {
         while(arl.remove(Character.valueOf('e')));
     }
 
-    /* Write a function which takes a positive 
+    /* Write a function which takes a positive
     integer and returns all its positive divisors.
     e.g.
     divisors(20) = [1, 2, 4, 5, 10, 20]
@@ -42,13 +40,13 @@ public class Lab {
         return res;
     }
 
-    /* Write a function which takes an array of 
-    integers and returns an ArrayList of integers 
-    such that for each element in the array a fair 
-    coin is tossed to decide whether or not to 
+    /* Write a function which takes an array of
+    integers and returns an ArrayList of integers
+    such that for each element in the array a fair
+    coin is tossed to decide whether or not to
     include it in the ArrayList.
     e.g.
-    randomSubset([2, 3, 5, 6]) returns [2, 6] (maybe) 
+    randomSubset([2, 3, 5, 6]) returns [2, 6] (maybe)
     randomSubset([2, 3, 5, 6]) returns [] (maybe) */
     static ArrayList<Integer> randomPick(int[] arr) {
         ArrayList<Integer> res = new ArrayList<>();
@@ -58,8 +56,8 @@ public class Lab {
         return res;
     }
 
-    /* Write a function which takes an ArrayList of 
-    integers and a rotation amount (integer) and 
+    /* Write a function which takes an ArrayList of
+    integers and a rotation amount (integer) and
     rotates the ArrayList by the amount given.
     e.g.
     rotate([3,1,5,7], 0)  [3,1,5,7]
@@ -82,8 +80,8 @@ public class Lab {
             arl.add(0, arl.remove(arl.size()-1));
     }
 
-    /* Write a program which takes integers from 
-    user until user enters a 0 and displays them in 
+    /* Write a program which takes integers from
+    user until user enters a 0 and displays them in
     ascending order (0 won’t be displayed). */
     public static void sortInputData(){
         Scanner input = new Scanner(System.in);

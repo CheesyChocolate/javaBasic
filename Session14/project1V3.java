@@ -1,6 +1,4 @@
 //made by suren
-package Session14;
-
 public class project1V3 {
     public static boolean checker(int i){
         int first=  i /1000;
@@ -13,7 +11,7 @@ public class project1V3 {
             return false;
     }
     // public static int[] repeatCounter(boolean[] arr,boolean cond)    {
-    
+
     // }
     public static void main(String Args[])  {
         boolean[] arr = new boolean[10000];

@@ -1,5 +1,3 @@
-package Session1;
-
 import java.util.Scanner;
 
 public class ReadingInput {

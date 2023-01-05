@@ -1,6 +1,4 @@
 //made by Suren
-package Session19;
-
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Random;
@@ -11,18 +9,18 @@ public class Project2 {
         Random random = new Random();
         int randomNumber = random.nextInt(Hashset.size());
         Iterator<Integer> iterator = Hashset.iterator();
-        
+
         int currentIndex = 0;
         Integer randomElement = null;
-        
-        while(iterator.hasNext()){            
+
+        while(iterator.hasNext()){
             randomElement = iterator.next();
             if(currentIndex == randomNumber)
-                return randomElement;            
+                return randomElement;
             currentIndex++;
         }
         return randomElement;
-    }    
+    }
     public static void main(String Args[])  {        //useing an array with index in conjunction with main HashSet would be better but this project won't allow it
         HashSet<Integer> valid = new HashSet<Integer>();
         int first,second,third,forth;
@@ -45,7 +43,7 @@ public class Project2 {
             third=  choice/10%10;
             forth=  choice%10;
             int[] choiceArr = {first, second, third, forth};
-           
+
             System.out.println("You fool I choose  " + choice);         //here is user interface
             System.out.print("Now tell me the correct places(0-4): ");
             int corP = scanner.nextInt();
@@ -56,8 +54,8 @@ public class Project2 {
                 System.out.println("I AM INEVITABLE MASTERMIND");
                 break;
             }
-            
-            for(int i=0;i<9999;i++)  {         //traverse the "valid"                
+
+            for(int i=0;i<9999;i++)  {         //traverse the "valid"
                 int firstall=  i /1000;
                 int secondall= i/100%10;
                 int thirdall=  i/10%10;

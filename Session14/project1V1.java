@@ -1,6 +1,4 @@
 //made by Suren
-package Session14;
-
 public class project1V1 {
     //a method that checks if each digit of enterd four digit number is similar or not
     public static boolean checker(int i){

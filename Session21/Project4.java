@@ -8,8 +8,6 @@ the ability to rename turkish character is also is not tested.
 the original program written for a build of Linux that has no support for
 turkish character. */
 
-package Session21;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -69,6 +67,6 @@ public class Project4 {
         if(f.renameTo(new File (f.getParent() + "\\" + fileName)))      //TODO      this renameing function makes the program, OS dependent
             System.out.print(".");
         else
-            System.out.print("error"); 
+            System.out.print("error");
     }
 }

@@ -1,4 +1,3 @@
-package Session16;
 import java.util.ArrayList;
 public class quiz {
     public static void main(String[] args) {
@@ -16,4 +15,3 @@ public class quiz {
         return answer;
     }
 }
- 

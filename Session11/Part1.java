@@ -1,5 +1,3 @@
-package Session11;
-
 public class Part1 {
 //    public static void main(String[] args) {
 //        int x = 1; // x represents an int value
