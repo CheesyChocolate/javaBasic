@@ -240,25 +240,19 @@
 ---
 
 # Lab Questions
+1. Write a program to print the sum of all the elements of an array of size 5.
+2. write a function that takes an array of integers and sorts it in ascending order.(return an array)
+3. write a function that takes an array of integers and sorts it in descending order.(return an array)
+4. write a function which rotate an integer array by given amount. As demenstrated:
 
-	1. Write a program to print the sum of all the elements of an
-	array of size 5.
-	3. write a function that takes an array of integers and sorts
-	it in ascending order.(return an array)
-	4. write a function that takes an array of integers and sorts
-	it in descending order.(return an array)
-	6. write a function which rotate an integer array by given amount.
-	As demenstrated:
 `[1, 2, 3, 4, 5, 6] -> rotate by +1 -> [6, 1, 2, 3, 4, 5]`
 
 `[1, 2, 3, 4, 5, 6] -> rotate by +3 -> [4, 5, 6, 1, 2, 3]`
 
 `[1, 2, 3, 4, 5, 6] -> rotate by -2 -> [3, 4, 5, 6, 1, 2]`
 
-	5. write a program that take a set of integers from user and print them
-	in reverse order
-	7. write a function that take two sorted array of integers and returns a
-	merged sorted array. (in same order of two initial array)
+5. write a program that take a set of integers from user and print them in reverse order
+6. write a function that take two sorted array of integers and returns a merged sorted array. (in same order of two initial array)
 
 ---
 
@@ -266,7 +260,7 @@ _answers to exercises_
 
 1. a
 
-2. b
+2. c
 
 3. c
 
